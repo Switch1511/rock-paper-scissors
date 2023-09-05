@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 
 import { GameModule } from './main/game/game.module';
 
+import { HeaderModule } from './main/header/header.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +17,8 @@ import { GameModule } from './main/game/game.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GameModule
+    GameModule,
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

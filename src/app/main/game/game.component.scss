@@ -1,0 +1,18 @@
+#game{
+  height: 100%;
+  padding: 10px 0;
+
+  section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    border: 4px solid black;
+    border-radius: 26px;
+
+    h3{
+      font-size: 92px;
+    }
+  }
+}

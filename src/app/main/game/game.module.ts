@@ -6,8 +6,6 @@ import { GameComponent } from './game.component';
 
 import { FooterModule } from '../footer/footer.module';
 
-import { HeaderModule } from '../header/header.module';
-
 import { PlayModule } from '../play/play.module';
 
 import { ModalRulesModule } from '../modal-rules/modal-rules.module';
@@ -19,7 +17,6 @@ import { ModalRulesModule } from '../modal-rules/modal-rules.module';
   imports: [
     CommonModule,
     FooterModule,
-    HeaderModule,
     ModalRulesModule,
     PlayModule
   ],
