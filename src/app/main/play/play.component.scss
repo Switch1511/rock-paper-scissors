@@ -1,0 +1,25 @@
+.container{
+  margin-top: 35px;
+
+  .images{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .playerImg{
+    cursor: pointer;
+  }
+
+  section{
+    img{
+      width: 180px;
+      margin-bottom: 15px;
+    }
+  }
+
+  p{
+    font-size: 42px;
+    text-align: center;
+  }
+}

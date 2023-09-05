@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScoreService } from 'src/app/shared/services/score.service';
 
 @Component({
   selector: 'app-game',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  constructor() { }
+  receivedData: number = 0;
 
-  ngOnInit(): void {
+  constructor(private dataService: ScoreService) { }
+
+  ngOnInit() {
+    this.dataService.getData().subscribe((data) => {
+      this.receivedData = data;
+    });
   }
 
 }

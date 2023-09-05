@@ -1,1 +1,26 @@
-<p>play works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-4 images">
+      <section class="playerImg" (click)="toPlay(0)">
+        <img src="../../../assets/images/rock.png">
+      </section>
+
+      <section class="playerImg" (click)="toPlay(1)">
+        <img src="../../../assets/images/paper.png">
+      </section>
+
+      <section class="playerImg" (click)="toPlay(2)">
+        <img src="../../../assets/images/scissors.png">
+      </section>
+    </div>
+    <div class="col-4" style="display: flex; justify-content: center; align-items: center;">
+      <p *ngIf="!play">VS</p>
+      <p *ngIf="play" (click)="reload()">Jogar novamente</p>
+    </div>
+    <div class="col-4 images">
+      <section>
+        <img [src]="botImage">
+      </section>
+    </div>
+  </div>
+</div>

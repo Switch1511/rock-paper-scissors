@@ -1,2 +1,6 @@
 @import './assets/styles/reset.scss';
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  font-family: 'Inter', sans-serif;
+}
