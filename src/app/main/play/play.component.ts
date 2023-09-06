@@ -13,7 +13,8 @@ export class PlayComponent implements OnInit {
   play: boolean = false;
   moveBot: number = 0;
   movePlayer?: number;
-  result: number = 0;
+  scorePlayer: number = 0;
+  scoreComputer: number = 0;
 
   constructor( private dataService: ScoreService ) { }
 
@@ -52,28 +53,30 @@ export class PlayComponent implements OnInit {
     if(!this.play){
     this.play = true;
     this.movePlayer = i;
+    console.log(this.movePlayer)
     this.moveBot = Math.floor(Math.random() * 3);
 
     this.botImage = this.images[this.moveBot].img
 
     if(this.movePlayer == this.moveBot){
-      this.result = this.result
+
     } else if (this.movePlayer == 0 && this.moveBot == 2){
-      this.result ++
+      this.scorePlayer ++
     } else if (this.movePlayer == 1 && this.moveBot == 0){
-      this.result ++
+      this.scorePlayer ++
     } else if (this.movePlayer == 2 && this.moveBot == 1){
-      this.result ++
+      this.scorePlayer ++
     } else {
-      this.result --
+      this.scoreComputer ++
     }
 
-    this.dataService.setData(this.result);
+    this.dataService.setData(this.scorePlayer, this.scoreComputer);
     }
   }
 
   reload(){
     this.play = false;
+    this.movePlayer = undefined;
     this.randomImg();
   }
 

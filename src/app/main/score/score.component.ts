@@ -13,9 +13,9 @@ export class ScoreComponent implements OnInit {
   constructor(private dataService: ScoreService) { }
 
   ngOnInit() {
-    this.dataService.getData().subscribe((data) => {
-      this.receivedData = data;
-    });
+    // this.dataService.getData().subscribe((data) => {
+    //   this.receivedData = data;
+    // });
   }
 
 }

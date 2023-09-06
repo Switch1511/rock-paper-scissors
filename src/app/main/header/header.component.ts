@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScoreService } from 'src/app/shared/services/score.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  scorePlayer?: number;
+  scoreComputer?: number;
 
-  ngOnInit(): void {
+  constructor(private scoreService: ScoreService) { }
+
+  ngOnInit() {
+    this.scorePlayer = 0;
+    this.scoreComputer = 0;
+
+    this.scoreService.getData().subscribe((data: any) => {
+      console.log(data)
+      this.scorePlayer = data.scorePlayer;
+      this.scoreComputer = data.scoreComputer;
+    });
   }
 
 }

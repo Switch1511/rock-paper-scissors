@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, ReplaySubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScoreService {
 
-  private dataSubject = new BehaviorSubject<number>(0);
+  private dataSubject = new ReplaySubject();
 
-  setData(data: number) {
-    this.dataSubject.next(data);
+  setData(scorePlayer: number, scoreComputer: number) {
+    this.dataSubject.next({scorePlayer, scoreComputer});
   }
 
   getData() {
     return this.dataSubject.asObservable();
   }
+
 }

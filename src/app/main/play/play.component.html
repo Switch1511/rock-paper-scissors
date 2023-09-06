@@ -1,26 +1,29 @@
 <div class="container">
   <div class="row">
-    <div class="col-4 images">
-      <section class="playerImg" (click)="toPlay(0)">
-        <img src="../../../assets/images/rock.png">
-      </section>
+    <div class="game-interface">
 
-      <section class="playerImg" (click)="toPlay(1)">
-        <img src="../../../assets/images/paper.png">
-      </section>
+      <div class="images">
+        <section>
+          <img [src]="botImage">
+        </section>
+      </div>
 
-      <section class="playerImg" (click)="toPlay(2)">
-        <img src="../../../assets/images/scissors.png">
-      </section>
-    </div>
-    <div class="col-4" style="display: flex; justify-content: center; align-items: center;">
-      <p *ngIf="!play">VS</p>
-      <button *ngIf="play" (click)="reload()">Play again</button>
-    </div>
-    <div class="col-4 images">
-      <section>
-        <img [src]="botImage">
-      </section>
+      <p>VS</p>
+
+      <div class="images">
+        <section class="playerImg" (click)="toPlay(0)" *ngIf="this.movePlayer == undefined || this.movePlayer == 0">
+          <img src="../../../assets/images/rock.png">
+        </section>
+
+        <section class="playerImg image-center" (click)="toPlay(1)" *ngIf="this.movePlayer == undefined || this.movePlayer == 1">
+          <img src="../../../assets/images/paper.png">
+        </section>
+
+        <section class="playerImg" (click)="toPlay(2)">
+          <img src="../../../assets/images/scissors.png" *ngIf="this.movePlayer == undefined || this.movePlayer == 2">
+        </section>
+      </div>
+
     </div>
   </div>
 </div>

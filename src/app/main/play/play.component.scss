@@ -1,10 +1,19 @@
 .container{
-  margin-top: 35px;
+  margin-top: 100px;
+
+  .game-interface{
+    gap: 60px;
+    display: grid;
+  }
 
   .images{
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
+
+    .image-center{
+      margin: 0 82px;
+    }
   }
 
   .playerImg{
@@ -14,12 +23,11 @@
   section{
     img{
       width: 180px;
-      margin-bottom: 15px;
     }
   }
 
   p{
-    font-size: 42px;
+    font-size: 86px;
     text-align: center;
     margin: 0;
   }

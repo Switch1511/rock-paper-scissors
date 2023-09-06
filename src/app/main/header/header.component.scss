@@ -1,20 +1,42 @@
 .container{
   margin-top: 32px;
 
-  .header{
-    height: 200px;
-    border: 4px solid black;
-    border-radius: 26px;
+  p{
+    text-align: center;
+    font-size: 32px;
+    margin: 0;
+  }
 
-    .title{
-      display: flex;
-      align-items: center;
+  h3{
+    padding: 18px 0;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 58px;
+    margin: 0;
+  }
 
-      h2{
-        line-height: 52px;
-        font-size: 46px;
-      }
-    }
+  .score{
+    background-color: #cccccc;
+    border-radius: 28px;
+  }
+
+  .score-computer, .score-player{
+    border: 8px solid white;
+    color: white;
+    border-radius: 28px;
+    font-size: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .score-computer{
+    background-color: #f26d6d;
+  }
+
+  .score-player{
+    background-color: #6cd1f4;
   }
 }
 
