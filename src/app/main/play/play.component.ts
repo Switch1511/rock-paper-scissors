@@ -11,10 +11,8 @@ export class PlayComponent implements OnInit {
   botImage?: string;
   images: any
   play: boolean = false;
-
   moveBot: number = 0;
   movePlayer?: number;
-
   result: number = 0;
 
   constructor( private dataService: ScoreService ) { }
@@ -35,23 +33,19 @@ export class PlayComponent implements OnInit {
       }
     ]
 
-
     this.randomImg();
   }
 
   async randomImg(){
     const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-    while(this.play == false){
-      this.botImage = this.images[0].img
-      await sleep(200);
-      this.botImage = this.images[1].img
-      await sleep(200);
-      this.botImage = this.images[2].img
-      await sleep(200);
+    for(let i = 0 ; this.play == false; i++){
+      this.play == false ? this.botImage = this.images[i].img : ''
+      i == 2 ? i = -1 : i = i;
+      await sleep(100);
     }
 
-    this.botImage = this.images[this.moveBot].img
+
   }
 
   toPlay(i: number){
@@ -59,6 +53,8 @@ export class PlayComponent implements OnInit {
     this.play = true;
     this.movePlayer = i;
     this.moveBot = Math.floor(Math.random() * 3);
+
+    this.botImage = this.images[this.moveBot].img
 
     if(this.movePlayer == this.moveBot){
       this.result = this.result

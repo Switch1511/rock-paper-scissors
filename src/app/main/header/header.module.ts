@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './header.component';
 
-import { GameModule } from '../game/game.module';
+import { ScoreModule } from '../score/score.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { GameModule } from '../game/game.module';
   ],
   imports: [
     CommonModule,
-    GameModule
+    ScoreModule
   ],
   exports: [
     HeaderComponent

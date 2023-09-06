@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
-import { GameComponent } from './game.component';
+import { ScoreComponent } from './score.component';
 
 import { FooterModule } from '../footer/footer.module';
 
@@ -12,7 +12,7 @@ import { ModalRulesModule } from '../modal-rules/modal-rules.module';
 
 @NgModule({
   declarations: [
-    GameComponent
+    ScoreComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +21,7 @@ import { ModalRulesModule } from '../modal-rules/modal-rules.module';
     PlayModule
   ],
   exports: [
-    GameComponent
+    ScoreComponent
   ]
 })
-export class GameModule { }
+export class ScoreModule { }

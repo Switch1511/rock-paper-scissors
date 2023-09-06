@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
-import { GameModule } from './game/game.module';
+import { ScoreModule } from './score/score.module';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    GameModule
+    ScoreModule
   ],
   exports: [
-    GameModule
+    ScoreModule
   ]
 })
 export class CoreModule { }

@@ -15,7 +15,7 @@
     </div>
     <div class="col-4" style="display: flex; justify-content: center; align-items: center;">
       <p *ngIf="!play">VS</p>
-      <p *ngIf="play" (click)="reload()">Jogar novamente</p>
+      <button *ngIf="play" (click)="reload()">Play again</button>
     </div>
     <div class="col-4 images">
       <section>

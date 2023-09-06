@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ScoreService } from 'src/app/shared/services/score.service';
 
 @Component({
-  selector: 'app-game',
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss']
+  selector: 'app-score',
+  templateUrl: './score.component.html',
+  styleUrls: ['./score.component.scss']
 })
-export class GameComponent implements OnInit {
+export class ScoreComponent implements OnInit {
 
   receivedData: number = 0;
 
