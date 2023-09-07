@@ -22,15 +22,15 @@ export class PlayComponent implements OnInit {
     this.images = [
       {
         id: 0,
-        img: '/assets/images/paper.png'
+        img: './assets/images/paper.png'
       },
       {
         id: 1,
-        img: '/assets/images/rock.png'
+        img: './assets/images/rock.png'
       },
       {
         id: 2,
-        img: '/assets/images/scissors.png'
+        img: './assets/images/scissors.png'
       }
     ]
 
