@@ -1,1 +1,29 @@
-<p>play works!</p>
+<div class="container">
+  <div class="row">
+    <div class="game-interface">
+
+      <div class="images">
+        <section>
+          <img [src]="botImage">
+        </section>
+      </div>
+
+      <p>VS</p>
+
+      <div class="images">
+        <section class="playerImg" (click)="toPlay(0)" *ngIf="this.movePlayer == undefined || this.movePlayer == 0">
+          <img src="../../../assets/images/paper.png">
+        </section>
+
+        <section class="playerImg image-center" (click)="toPlay(1)" *ngIf="this.movePlayer == undefined || this.movePlayer == 1">
+          <img src="../../../assets/images/rock.png">
+        </section>
+
+        <section class="playerImg" (click)="toPlay(2)" *ngIf="this.movePlayer == undefined || this.movePlayer == 2">
+          <img src="../../../assets/images/scissors.png">
+        </section>
+      </div>
+
+    </div>
+  </div>
+</div>
