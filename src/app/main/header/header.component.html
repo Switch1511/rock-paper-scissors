@@ -9,8 +9,10 @@
   </div>
 
   <div class="row score">
+
     <div class="col-3 score-player">
       {{ scorePlayer }}
+      <div class="point_player" *ngIf="this.countPlayer">+1</div>
     </div>
     <div class="col-6">
       <h3>
@@ -19,6 +21,8 @@
     </div>
     <div class="col-3 score-computer">
       {{ scoreComputer}}
+      <div class="point_computer" *ngIf="this.countComputer">+1</div>
     </div>
+
   </div>
 </div>

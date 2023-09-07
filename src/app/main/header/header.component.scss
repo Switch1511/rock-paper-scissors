@@ -1,3 +1,7 @@
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  max-width: 1000px;
+}
+
 .container{
   margin-top: 32px;
 
@@ -5,6 +9,12 @@
     text-align: center;
     font-size: 32px;
     margin: 0;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+
+    @media screen and (max-width: 768px){
+      font-size: 4vw ;
+    }
   }
 
   h3{
@@ -14,11 +24,37 @@
     font-weight: bold;
     font-size: 58px;
     margin: 0;
+
+    @media screen and (max-width: 768px){
+      font-size: 6vw;
+    }
   }
 
   .score{
     background-color: #cccccc;
     border-radius: 28px;
+    position: relative;
+
+    .point_player, .point_computer{
+      width: auto;
+      position: absolute;
+      animation: slideUp 2s forwards ease-in-out;
+      text-shadow: 0px 0px 3px black;
+      bottom: -90px;
+      font-size: 58px;
+
+      @media screen and (max-width: 768px){
+        font-size: 6vw;
+      }
+    }
+
+    .point_player{
+      color: #6cd1f4;
+    }
+
+    .point_computer{
+      color: #f26d6d;
+    }
   }
 
   .score-computer, .score-player{
@@ -29,6 +65,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 768px){
+      font-size: 6vw;
+    }
   }
 
   .score-computer{
@@ -39,5 +79,17 @@
     background-color: #6cd1f4;
   }
 }
+
+@keyframes slideUp {
+  0% {
+      bottom: -90px;
+  }
+  100% {
+      bottom: -18px;
+      text-shadow: 0px 0px 8px black;
+      opacity: 0;
+  }
+}
+
 
 

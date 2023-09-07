@@ -22,11 +22,11 @@ export class PlayComponent implements OnInit {
     this.images = [
       {
         id: 0,
-        img: '../../../assets/images/rock.png'
+        img: '../../../assets/images/paper.png'
       },
       {
         id: 1,
-        img: '../../../assets/images/paper.png'
+        img: '../../../assets/images/rock.png'
       },
       {
         id: 2,
@@ -46,7 +46,8 @@ export class PlayComponent implements OnInit {
       await sleep(100);
     }
 
-
+    await sleep(1500);
+    this.reload();
   }
 
   toPlay(i: number){
@@ -60,11 +61,11 @@ export class PlayComponent implements OnInit {
 
     if(this.movePlayer == this.moveBot){
 
-    } else if (this.movePlayer == 0 && this.moveBot == 2){
+    } else if (this.movePlayer == 0 && this.moveBot == 1){
       this.scorePlayer ++
-    } else if (this.movePlayer == 1 && this.moveBot == 0){
+    } else if (this.movePlayer == 1 && this.moveBot == 2){
       this.scorePlayer ++
-    } else if (this.movePlayer == 2 && this.moveBot == 1){
+    } else if (this.movePlayer == 2 && this.moveBot == 0){
       this.scorePlayer ++
     } else {
       this.scoreComputer ++

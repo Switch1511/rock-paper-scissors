@@ -8,19 +8,29 @@ import { ScoreService } from 'src/app/shared/services/score.service';
 })
 export class HeaderComponent implements OnInit {
 
-  scorePlayer?: number;
-  scoreComputer?: number;
+  scorePlayer: number = 0;
+  scoreComputer: number = 0;
+
+  countPlayer: boolean = false;
+  countComputer: boolean = false;
 
   constructor(private scoreService: ScoreService) { }
 
   ngOnInit() {
-    this.scorePlayer = 0;
-    this.scoreComputer = 0;
+    const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-    this.scoreService.getData().subscribe((data: any) => {
-      console.log(data)
+    this.scoreService.getData().subscribe(async (data: any) => {
+
+      this.scorePlayer < data.scorePlayer ? this.countPlayer = true : ''
+      this.scoreComputer < data.scoreComputer ? this.countComputer = true : ''
+
       this.scorePlayer = data.scorePlayer;
       this.scoreComputer = data.scoreComputer;
+
+      await sleep(1000);
+
+      this.countPlayer = false;
+      this.countComputer = false;
     });
   }
 
