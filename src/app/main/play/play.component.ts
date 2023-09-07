@@ -22,15 +22,15 @@ export class PlayComponent implements OnInit {
     this.images = [
       {
         id: 0,
-        img: './assets/images/paper.png'
+        img: 'https://cdn-icons-png.flaticon.com/512/3172/3172747.png'
       },
       {
         id: 1,
-        img: './assets/images/rock.png'
+        img: 'https://images.vexels.com/media/users/3/145640/isolated/preview/a280e39f92cd30cd6181f08b1f4dca6b-earth-stone-rock-stone.png'
       },
       {
         id: 2,
-        img: './assets/images/scissors.png'
+        img: 'https://cdn-icons-png.flaticon.com/512/4229/4229057.png'
       }
     ]
 
